@@ -1,0 +1,39 @@
+Um banco concederá um crédito especial aos seus clientes, variável com o saldo médio no último ano. 
+Faça um algoritmo que leia o saldo médio de um cliente e calcule o valor do crédito de acordo com a tabela abaixo. 
+Mostre uma mensagem informando o saldo médio e o valor do crédito.
+
+      Saldo Médio                        Crédito
+Maior ou igual a R601,00        40% do valor do saldo médio
+Maior ou igual a R401,00        30% do valor do saldo médio
+Maior ou igual a R201,00        20% do valor do saldo médio
+
+--------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class Credito_Banco
+{
+    public static void main(String[] args){
+        
+    Scanner dados = new Scanner(System.in);
+    
+    double credito, saldo;
+        
+    System.out.println("DIGITA O SALDO DO CLIENTE DO ÚLTIMO ANO: ");
+    saldo = dados.nextDouble();
+        
+    if ((saldo)>=201 && ((saldo)<=400)){
+        credito = saldo * 0.2;
+    }else if ((saldo)>=401 && ((saldo)<=600)){
+        credito = saldo * 0.3;
+    }else if (saldo >=601){
+        credito = saldo * 0.4;
+    }else{
+        credito = saldo;
+    }if ((saldo)>=0 && ((saldo)<=200)){
+        credito = saldo * 0.0;
+    }
+    
+    System.out.println("SALDO DO CLIENTE: R$" + saldo);
+    System.out.println("VALOR DE CRETIDO ESPECIAL: R$" + credito);
+    }
+}

@@ -1,0 +1,41 @@
+4) Faça um programa que lê três valores e mostre o maior e o menor valor.
+
+------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class Maior_Menor
+{
+    public static void main(String[] args){
+        
+        Scanner entrada = new Scanner(System.in);
+        
+        double valor1, valor2, valor3, maior, menor;
+        
+        System.out.println("INFORME O PRIMEIRO VALOR: ");
+        valor1 = entrada.nextDouble();
+        
+        System.out.println("INFORME O SEGUNDO VALOR: ");
+        valor2 = entrada.nextDouble();
+        
+        System.out.println("INFORME O TERCEIRO VALOR: ");
+        valor3 = entrada.nextDouble();
+        
+        if (valor1 >= valor2 && valor1 >= valor3) {
+            maior = valor1;
+        }else if (valor2 >= valor1 && valor2 >= valor3) {
+            maior = valor2;
+        }else {
+            maior = valor3;} 
+        if (valor1 <= valor2 && valor1 <= valor3) {
+            menor = valor1;
+        }else if (valor2 <= valor1 && valor2 <= valor3) {
+            menor = valor2;
+        }else{
+            menor = valor3;
+        } 
+        
+        System.out.println("Maior Valor é: " + maior);
+        System.out.println("Menor Valor é: " + menor);
+         
+    }
+}

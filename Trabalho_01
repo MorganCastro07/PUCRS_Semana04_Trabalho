@@ -1,0 +1,45 @@
+Faça um programa que simule o funcionamento de uma calculadora. O programa deve prover ao usuário as opções de realizar
+Adição, Subtração, Multiplicação e Divisão. Também deve ser lido os dois números que o usuário deseja aplicar a operação.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class Calculadora
+{
+   public static void main(String args[]){
+       Scanner dados = new Scanner(System.in);
+       
+       int escolha;
+       double Resultado, numero1, numero2;
+       
+       System.out.println("Bem Vindo a MINHA PRIMEIRA CALCULADORA!");
+       System.out.println("ESCOLHA a Operação que Deseja Realizar: 1,2,3,4");
+       System.out.println("1. ADIÇÃO (+)");
+       System.out.println("2. SUBTRAÇÃO (-)");
+       System.out.println("3. MULTIPLICAÇÂO (*)");
+       System.out.println("4. DIVISAO (/)");
+       
+       escolha = dados.nextInt();
+       
+       System.out.println("DIGITE O PRIMEIRO NÚMERO");
+       numero1 = dados.nextDouble();
+       
+       System.out.println("DIGITE O SEGUNDO NÚMERO");
+       numero2 = dados.nextDouble();
+      
+        if (escolha == 1) {
+            System.out.println("Resultado: " + (numero1 + numero2));
+        } else if (escolha == 2) {
+            System.out.println("Resultado: " + (numero1 - numero2));
+        } else if (escolha == 3) {
+            System.out.println("Resultado: " + (numero1 * numero2));
+        } else if (escolha == 4) {
+            if (numero2 != 0) {
+                System.out.println("Resultado: " + (numero1 / numero2));
+            } else {
+                System.out.println("ERRO: DIVISÃO POR ZERO NÃO EXISTE");
+            }
+        } else {
+            System.out.println("OPÇÃO INVÁLIDO!");}
+    }
+}

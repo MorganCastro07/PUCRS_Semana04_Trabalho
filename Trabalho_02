@@ -1,0 +1,38 @@
+Faça um algoritmo que calcule a média que um aluno obteve em uma matéria. Deve ser solicitado que o aluno informe suas duas notas. 
+Caso a média seja maior ou igual a 7, deve ser imprimido uma mensagem informando que o aluno foi aprovado. 
+Se a média for menor que 6, deve ser impresso uma mensagem alertando que o mesmo foi reprovado. Se o aluno ficou com a média entre 6 e 7, 
+deve ser impresso uma mensagem informando que ele está em recuperação (exame).
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class Aluno
+{
+    public static void main(String[]args){
+      
+        Scanner dados = new Scanner (System.in);
+        
+        double nota1, nota2, notafinal;
+        String nome;
+    
+        System.out.println("INFORME O NOME DO(A) ALUNO(A): ");
+        nome = dados.nextLine();
+        
+        System.out.println("INFORME A PRIMEIRA NOTA DO(A) ALUNO(A): ");
+        nota1 = dados.nextDouble();
+        
+        System.out.println("INFORME A SEGUNDA NOTA DO(A) ALUNO(A): ");
+        nota2 = dados.nextDouble();
+        
+        notafinal = ((nota1+nota2)/2);
+        
+        System.out.println("NOTA FINAL: "+ notafinal);
+        
+        if (notafinal >=7) {
+            System.out.println("APROVADO");
+        } else if (notafinal <=6) {
+            System.out.println("REPROVADO");}
+        if  (((nota1+nota2)/2)>=5 && ((nota1+nota2)/2)<7){
+            System.out.println("ALUNO EM RECUPERAÇÃO");}
+    }
+}

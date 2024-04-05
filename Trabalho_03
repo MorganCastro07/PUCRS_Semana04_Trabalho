@@ -1,0 +1,30 @@
+Faça um programa para tratar o funcionamento de um saque em caixa eletrônico de banco. 
+Neste programa o saque deverá ser feito apenas se o cliente possuir saldo e o cliente deve ter avisado se o saque foi realizado com sucesso ou não.
+Considere que o cliente tem R$ 300,00 de saldo.
+
+----------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class Saque_Banco
+{
+    public static void main(String[] args){
+        
+    Scanner dados = new Scanner(System.in);
+    
+    double saldoconta = 300, saquelimite = 300, saque;
+        
+    System.out.println("DIGITA VALOR DO SAQUE: ");
+    saque = dados.nextDouble();
+        
+    if (saque > saldoconta){
+        System.out.println("SALDO INSUFICIENTE. SAQUE NEGADO.");
+    }else if (saque > saquelimite){
+        System.out.println("VALOR SOLICITADO EXCEDE O LIMITE DA CONTA BANCARIA.");
+    }else{
+        saldoconta -= saque;
+        
+        System.out.println("VALOR DO SAQUE R$" + saque + " TRANSAÇÃO BEM-SUCEDIDO.");
+        System.out.println("NOVO SALDO DA CONTA: R$" + saldoconta);  
+    }
+    }
+}

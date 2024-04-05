@@ -1,0 +1,36 @@
+5) Elabore um algoritmo que dada a idade de um nadador classifica-o em uma das seguintes categorias: 
+● infantil A = 5 - 7 anos ● infantil B = 8-10 anos ● juvenil A = 11-13 anos ● juvenil B = 14-17 anos ● adulto = maiores de 18 anos
+
+-------------------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class Nadador
+{
+    public static void main(String[]args){
+      
+        Scanner dados = new Scanner (System.in);
+        
+        int idade;
+        String nome;
+
+        System.out.println("INFORME O NOME DO(A) NADADOR(A): ");
+        nome = dados.nextLine();
+        
+        System.out.println("INFORME A SUA IDADE: ");
+        idade = dados.nextInt();
+        
+        if  ((idade)>=0 && ((idade)<=4)){
+            System.out.println("ALUNO(A) REPROVADO, POR SER MENOR DE IDADE!");}
+        if  ((idade)>=5 && ((idade)<=7)){
+            System.out.println("ALUNO(A) CLASSIFICADO(A) PARA INFANTIL A");}
+        if  ((idade)>=8 && ((idade)<=10)){
+            System.out.println("ALUNO(A) CLASSIFICADO(A) PARA INFANTIL B");}
+        if  ((idade)>=11 && ((idade)<=13)){
+            System.out.println("ALUNO(A) CLASSIFICADO(A) PARA JUVENIL A");}
+        if  ((idade)>=14 && ((idade)<=17)){
+            System.out.println("ALUNO(A) CLASSIFICADO(A) PARA JUVENIL B");}
+        if  ((idade)>=18){
+            System.out.println("ALUNO(A) CLASSIFICADO(A) PARA ADULTO");}
+        
+    }
+}

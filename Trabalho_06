@@ -1,0 +1,29 @@
+Faça um algoritmo que leia um nº inteiro e mostre uma mensagem indicando se este número é par ou ímpar, e se é positivo ou negativo.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+public class Numero_Inteiro
+{
+    public static void main(String[]args){
+      
+        Scanner numero1 = new Scanner (System.in);
+        
+        int numero;
+        
+        System.out.println("DIGITA UM NÚMERO INTEIRO: ");
+        numero = numero1.nextInt();
+
+        if (numero % 2 == 0){
+            System.out.println("NÚMERO PAR");
+        }else{
+            System.out.println("NÚMERO IMPAR");
+        }if (numero > 0){
+            System.out.println("NÚMERO POSITIVO");
+        }else if (numero < 0){
+            System.out.println("NÚMERO NEGATIVO");
+        }else{
+            System.out.println("NÚMERO É ZERO!");
+        }
+    }
+}

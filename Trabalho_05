@@ -16,7 +16,7 @@ public class Nadador
         System.out.println("INFORME O NOME DO(A) NADADOR(A): ");
         nome = dados.nextLine();
         
-        System.out.println("INFORME A SUA IDADE: ");
+        System.out.println("INFORME A IDADE: ");
         idade = dados.nextInt();
         
         if (idade <=4){
